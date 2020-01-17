@@ -56,7 +56,7 @@ class ProductController {
     public Product update(@PathVariable Long id, @RequestBody Product product) {
         Product dbProduct = getProduct(id);
         dbProduct.setName(product.getName());
-        dbProduct.setId(product.getId());
+        dbProduct.setId(id);
         
         return dbProduct;
     }
